@@ -1,0 +1,32 @@
+{
+  "name": "meteor-ts-runtime-checks",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.24.8",
+    "meteor-node-stubs": "^1.2.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/mocha": "^8.2.3",
+    "@types/node": "^18.16.5",
+    "@types/react": "^18.2.5",
+    "@types/react-dom": "^18.2.4",
+    "ts-patch": "^3.2.1",
+    "ts-runtime-checks": "^0.6.1",
+    "typescript": "^5.4.5"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.tsx",
+      "server": "server/main.ts"
+    },
+    "testModule": "tests/main.ts"
+  }
+}
